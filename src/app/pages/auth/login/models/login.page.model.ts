@@ -14,7 +14,7 @@ export class ILoginPage {
     Validators.email,
   ]);
 
-  private passwordContorl: FormControl = new FormControl<string>('', [
+  private passwordContorl: FormControl = new FormControl<string>({value: '', disabled: false}, [
     Validators.required,
   ]);
 

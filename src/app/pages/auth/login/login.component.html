@@ -1,9 +1,23 @@
-<form [formGroup]="form" (ngSubmit)="login()">
-  <img src="../../../../assets/login/logo-trakto.svg" alt="">
-  <span>Olá, faça login em sua conta.</span>
-  <label for="email">E-mail</label>
-  <input type="email" formControlName="email" />
-  <label for="password">Senha</label>
-  <input type="password" formControlName="password" />
-  <button type="submit">Login</button>
-</form>
+<section>
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <img src="../../../../assets/login/logo-trakto.svg" alt="" />
+    <span>Olá, faça login em sua conta.</span>
+    <label for="email">E-mail</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Seu e-mail"
+        formControlName="email"
+        autofocus
+        autocomplete="off"
+      />
+    <label for="password">Senha</label>
+    <input
+      type="password"
+      formControlName="password"
+      required
+      autocomplete="off"
+    />
+    <button type="submit">Login</button>
+  </form>
+</section>
