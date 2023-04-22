@@ -1,0 +1,29 @@
+export interface ILimits {
+  export_pdf_low: true;
+  image_upload: true;
+  create_document: true;
+  export_gif: true;
+  document_publish_online: true;
+  export_pdf_medium: true;
+  export_video: false;
+  remove_bg: true;
+  export_pdf_count: 1000;
+  export_gif_count: 0;
+  remove_bg_count: 5;
+  use_template_premium_count: 3;
+  gif_stock: true;
+  icon_stock: true;
+  export_png_medium: true;
+  image_stock: true;
+  export_video_count: 1000;
+  export_with_watermark: false;
+  export_png_high: true;
+  export_png_low: true;
+  export_pdf_high: false;
+  font_premium: false;
+  use_template_premium: false;
+  shape_stock: true;
+  upload_font: false;
+  export_png_count: 1000;
+  create_document_count: 5;
+}
