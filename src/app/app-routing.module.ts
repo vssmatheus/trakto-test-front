@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/auth/auth.module').then((m) => m.AuthModule),
   },
+  {
+    path: 'abertura',
+    loadChildren: () =>
+      import('./pages/abertura/abertura.module').then((m) => m.AberturaModule),
+  },
 ];
 
 @NgModule({

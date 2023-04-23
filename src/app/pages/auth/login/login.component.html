@@ -1,23 +1,38 @@
 <section>
   <form [formGroup]="form" (ngSubmit)="login()">
-    <img src="../../../../assets/login/logo-trakto.svg" alt="" />
+    <img src="../../../../assets/login/logo-trakto.svg" alt="logo-trakto" />
     <span>Olá, faça login em sua conta.</span>
     <label for="email">E-mail</label>
-      <input
-        type="email"
-        class="form-control"
-        placeholder="Seu e-mail"
-        formControlName="email"
-        autofocus
-        autocomplete="off"
-      />
+    <input
+      type="email"
+      value="email"
+      class="form-control"
+      placeholder="Seu e-mail"
+      formControlName="email"
+      autofocus
+      autocomplete="off"
+      [ngClass]="{ invalid: emailControl.invalid && !emailControl.pristine }"
+    />
     <label for="password">Senha</label>
     <input
       type="password"
       formControlName="password"
       required
       autocomplete="off"
+      [ngClass]="{
+        invalid: passwordContorl.invalid && !passwordContorl.pristine
+      }"
     />
-    <button type="submit">Login</button>
+    <button
+      type="submit"
+      [disabled]="form.invalid || (isAuthenticating$ | async)"
+    >
+      <img
+        class="spinner"
+        *ngIf="isAuthenticating$ | async"
+        src="../../../../assets/login/spinner.svg" alt="logo-trakto"
+      />
+      {{ loginBtnLabel$ | async }}
+    </button>
   </form>
 </section>
