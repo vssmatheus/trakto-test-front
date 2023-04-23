@@ -4,17 +4,20 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 import { ILogin } from 'src/app/core/models/login.model';
 
 export class ILoginPage {
+  protected isAuthenticating$ = new BehaviorSubject<boolean>(false);
+
   constructor(protected readonly _formBuilder: FormBuilder) {}
 
-  private emailControl: FormControl = new FormControl<string>('', [
+  protected emailControl: FormControl = new FormControl<string>('', [
     Validators.required,
     Validators.email,
   ]);
 
-  private passwordContorl: FormControl = new FormControl<string>('', [
+  protected passwordContorl: FormControl = new FormControl<string>('', [
     Validators.required,
   ]);
 

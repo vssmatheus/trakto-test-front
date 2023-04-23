@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "off",
+  "editor.rulers": [
+    100
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.printWidth": 100
+}
