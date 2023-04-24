@@ -1,25 +1,76 @@
 <nav [style.background-color]="bgColor">
-  <div class="logo-container">
-    <img *ngIf="isDark" src="../../../../../assets/abertuta/logo-trakto-white.svg" alt="logo-trakto">
-    <img *ngIf="!isDark" src="../../../../../assets/material-didatico/logo-trakto-dark.svg" alt="logo-trakto">
+  <div class="items-left">
+    <div class="logo-container">
+      <img
+        *ngIf="isDark"
+        src="../../../../../assets/abertuta/logo-trakto-white.svg"
+        alt="logo-trakto"
+      />
+      <img
+        *ngIf="!isDark"
+        src="../../../../../assets/material-didatico/logo-trakto-dark.svg"
+        alt="logo-trakto"
+      />
+    </div>
+    <div *ngIf="!isDark" class="back-button">
+      <a href="/abertura"
+        ><img
+          src="../../../../../assets/material-didatico/logout-icon.svg"
+          alt=""
+        />Trocar de ambiente</a
+      >
+    </div>
   </div>
-  <div class="items-right"  [style.color]="color">
-
+  <div class="items-right" [style.color]="color">
     <div class="date">
-      <i><img *ngIf="isDark" src="../../../../../assets/abertuta/calendar-icon.svg" alt=""></i>
-      <i><img *ngIf="!isDark" src="../../../../../assets/material-didatico/calendar-icon-dark.svg" alt=""></i>
+      <i
+        ><img
+          *ngIf="isDark"
+          src="../../../../../assets/abertuta/calendar-icon.svg"
+          alt=""
+      /></i>
+      <i
+        ><img
+          *ngIf="!isDark"
+          src="../../../../../assets/material-didatico/calendar-icon-dark.svg"
+          alt=""
+      /></i>
       <span>08/02/2023</span>
     </div>
 
     <div class="notification">
-      <i><img *ngIf="isDark" src="../../../../../assets/abertuta/notification-icon.svg" alt=""></i>
-      <i><img *ngIf="!isDark" src="../../../../../assets/material-didatico/notification-icon-dark.svg" alt=""></i>
+      <i
+        ><img
+          *ngIf="isDark"
+          src="../../../../../assets/abertuta/notification-icon.svg"
+          alt=""
+      /></i>
+      <i
+        ><img
+          *ngIf="!isDark"
+          src="../../../../../assets/material-didatico/notification-icon-dark.svg"
+          alt=""
+      /></i>
     </div>
 
     <div class="avatar">
-      <img class="user-image" src="../../../../../assets/abertuta/avatar-image.png" alt="avatar user">
-      <i><img *ngIf="isDark" src="../../../../../assets/abertuta/arrow-down-icon.svg" alt=""></i>
-      <i><img *ngIf="!isDark" src="../../../../../assets/material-didatico/arrow-down-icon-dark.svg" alt=""></i>
+      <img
+        class="user-image"
+        src="../../../../../assets/abertuta/avatar-image.png"
+        alt="avatar user"
+      />
+      <i
+        ><img
+          *ngIf="isDark"
+          src="../../../../../assets/abertuta/arrow-down-icon.svg"
+          alt=""
+      /></i>
+      <i
+        ><img
+          *ngIf="!isDark"
+          src="../../../../../assets/material-didatico/arrow-down-icon-dark.svg"
+          alt=""
+      /></i>
     </div>
   </div>
 </nav>
