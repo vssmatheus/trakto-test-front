@@ -1,1 +1,16 @@
-<p>abertura works!</p>
+<section>
+  <div class="pattern"></div>
+  <app-header [isDark]="true" bgColor="#252323" color="#ffffff"></app-header>
+
+  <div class="buttons">
+    <div *ngFor="let data of buttons">
+      <app-button-navigator-abertura
+        *ngIf="data"
+        [name]="data?.name"
+        [image]="data?.image"
+        [route]="data?.route"
+        [color]="data?.color"
+      ></app-button-navigator-abertura>
+    </div>
+  </div>
+</section>
