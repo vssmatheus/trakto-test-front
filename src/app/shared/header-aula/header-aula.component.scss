@@ -1,0 +1,56 @@
+section {
+  position: relative;
+  background-color: white;
+
+  .date-info {
+    display: flex;
+    align-items: center;
+    span {
+      background: #e4ebfb;
+      width: fit-content;
+      padding: 4px 12px;
+      border-radius: 3rem;
+      color: #7183a6;
+    }
+
+    .controllers {
+      display: flex;
+      width: 48px;
+      justify-content: space-between;
+      margin-left: 8px;
+      button {
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+          max-height: 32px;
+        }
+      }
+    }
+  }
+
+  .title {
+    h2 {
+      margin: 16px 0 8px;
+      font-weight: 700;
+      font-size: 24px;
+      color: #354564;
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      color: #7183a6;
+    }
+  }
+
+  .button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

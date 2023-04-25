@@ -10,7 +10,7 @@ export class AberturaComponent {
     {
       name: 'Material didático',
       image: '../../../assets/abertuta/material-didatico.svg',
-      route: '/login',
+      route: '/material-didatico',
       color: '#4173CD',
     },
     {

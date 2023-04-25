@@ -12,6 +12,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/abertura/abertura.module').then((m) => m.AberturaModule),
   },
+  {
+    path: 'material-didatico',
+    loadChildren: () =>
+      import('./pages/material-didatico/material-didatico.module').then(
+        (m) => m.MaterialDidaticoModule
+      ),
+  },
 ];
 
 @NgModule({
