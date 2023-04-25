@@ -5,6 +5,7 @@ import { ButtonRouterComponent } from './button-router/button-router.component';
 import { HeaderAulaComponent } from './header-aula/header-aula.component';
 import { HeaderComponent } from './header/header.component';
 import { SliderAulaComponent } from './slider-aula/slider-aula.component';
+import { SliderVideoComponent } from './slider-video/slider-video.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { SliderAulaComponent } from './slider-aula/slider-aula.component';
     HeaderAulaComponent,
     ButtonRouterComponent,
     SliderAulaComponent,
+    SliderVideoComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -19,6 +21,7 @@ import { SliderAulaComponent } from './slider-aula/slider-aula.component';
     HeaderAulaComponent,
     ButtonRouterComponent,
     SliderAulaComponent,
+    SliderVideoComponent,
   ],
 })
 export class SharedModule {}
