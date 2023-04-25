@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { map, tap } from 'rxjs';
 import { AuthService } from 'src/app/core/auth.service';
-import { updateUser } from 'src/app/core/store/core.actions';
 import { ILoginPage } from './models/login.page.model';
 
 @Component({
@@ -18,7 +18,8 @@ export class LoginComponent extends ILoginPage {
   constructor(
     protected override _formBuilder: FormBuilder,
     private readonly _authService: AuthService,
-    private readonly _store: Store
+    private readonly _store: Store,
+    private readonly _router: Router
   ) {
     super(_formBuilder);
   }
@@ -29,12 +30,8 @@ export class LoginComponent extends ILoginPage {
       .login(this.form.value)
       .pipe(tap(() => this.isAuthenticating$.next(false)))
       .subscribe({
-        next: (user) => {
-          this._store.dispatch(
-            updateUser({
-              user,
-            })
-          );
+        next: () => {
+          this._router.navigate(['abertura']);
         },
       });
   }

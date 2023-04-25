@@ -1329,6 +1329,13 @@
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   "version" "2.0.4"
 
+"@ngrx/effects@^15.4.0":
+  "integrity" "sha512-/8gHhOM9aeGaw8OG2LLwi4I4p84xzG0EU9TqWrvQcW74wn8sFZONjLvUte5YOzJ5502PPFFrfXSOc+lHnVAJUA=="
+  "resolved" "https://registry.npmjs.org/@ngrx/effects/-/effects-15.4.0.tgz"
+  "version" "15.4.0"
+  dependencies:
+    "tslib" "^2.0.0"
+
 "@ngrx/store-devtools@^15.4.0":
   "integrity" "sha512-AqWRprSyS3u/vZlpsBOPMW1/0TZS2LE13/KpZedEY+RMCW+mi53esqgrdNGOB3Wr4vrI82Ar9fgaIm4TQO6LPg=="
   "resolved" "https://registry.npmjs.org/@ngrx/store-devtools/-/store-devtools-15.4.0.tgz"

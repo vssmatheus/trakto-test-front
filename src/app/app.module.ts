@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CoreModule } from './core/core.module';
-import { AuthModule } from './pages/auth/auth.module';
+import { LoggedGuard } from './pages/auth/login/guards/logged.guard';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,10 +17,10 @@ import { AuthModule } from './pages/auth/auth.module';
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
-    AuthModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([]),
   ],
-  providers: [],
+  providers: [LoggedGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
