@@ -61,14 +61,14 @@ export class SliderVideoComponent {
     this.slider.nativeElement = '';
   }
 
-  @HostListener('document:mousedown', ['$event'])
+  @HostListener('mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
     if (event.button === 0) {
       this.draggingPosition = event.clientX;
     }
   }
 
-  @HostListener('document:mousemove', ['$event'])
+  @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     if (this.draggingPosition) {
       const dragDistance = event.clientX - this.draggingPosition;
@@ -78,16 +78,14 @@ export class SliderVideoComponent {
         this.draggingPosition = 0;
         this.videoPosition = this.videos.length * -178;
       }
-      this.slider.nativeElement.style.left = this.videoPosition;
     }
     if (this.videoPosition > this.videos.length + 1) {
       this.draggingPosition = 0;
       this.videoPosition = 0;
-      this.slider.nativeElement.style.left = '0px';
     }
   }
 
-  @HostListener('document:mouseup', ['$event'])
+  @HostListener('mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
     if (event.button === 0) {
       this.draggingPosition = 0;

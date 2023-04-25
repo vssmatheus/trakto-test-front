@@ -55,14 +55,14 @@ export class SliderAulaComponent {
 
   ngOnInit(): void {}
 
-  @HostListener('document:mousedown', ['$event'])
+  @HostListener('mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
     if (event.button === 0) {
       this.startDraggingPosition = event.clientX;
     }
   }
 
-  @HostListener('document:mousemove', ['$event'])
+  @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     if (this.startDraggingPosition) {
       const dragDistance = event.clientX - this.startDraggingPosition;
@@ -79,7 +79,7 @@ export class SliderAulaComponent {
     }
   }
 
-  @HostListener('document:mouseup', ['$event'])
+  @HostListener('mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
     if (event.button === 0) {
       this.startDraggingPosition = 0;
