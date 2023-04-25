@@ -28,6 +28,13 @@ const routes: Routes = [
         (m) => m.MaterialDidaticoModule
       ),
   },
+  {
+    path: 'ver-todos',
+    loadChildren: () =>
+      import('./pages/ver-todos/ver-todos.module').then(
+        (m) => m.VerTodosModule
+      ),
+  },
 ];
 
 @NgModule({

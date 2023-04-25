@@ -1,0 +1,14 @@
+section {
+  background-color: #eff2f9;
+  min-height: 100%;
+  padding: 0 65px;
+  padding-bottom: 7rem;
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100vh;
+  }
+}
