@@ -16,4 +16,8 @@ Desafio de desenvolvimento da interface TraktoTV.
 
 ## Layout - Tela de Abertura (Figma)
 
+![Abertura](https://user-images.githubusercontent.com/38119742/234717804-2e81b976-a055-4006-b8ab-7ec31341ca98.png)
+
 ## Layout - Tela de Material Didatico (Figma)
+
+![Material didatico](https://user-images.githubusercontent.com/38119742/234717852-993f5e88-85df-4a81-b211-f41abce20fa6.png)
