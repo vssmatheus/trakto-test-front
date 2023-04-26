@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, take } from 'rxjs';
 import { IDesign } from '../models/design.model';
 
@@ -15,7 +16,10 @@ export class SliderAulaComponent implements AfterViewInit {
   imagePosition = 0;
   startDraggingPosition = 0;
 
-  constructor() {}
+  startClickX = 0;
+  endClickX = 0;
+
+  constructor(private readonly _router: Router) {}
 
   ngAfterViewInit(): void {
     this.materiaisDidaticos
@@ -28,6 +32,8 @@ export class SliderAulaComponent implements AfterViewInit {
   @HostListener('mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
     event.preventDefault();
+    this.startClickX = event.clientX;
+
     if (event.button === 0) {
       this.startDraggingPosition = event.clientX;
     }
@@ -36,6 +42,7 @@ export class SliderAulaComponent implements AfterViewInit {
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     event.preventDefault();
+
     if (this.startDraggingPosition) {
       const dragDistance = event.clientX - this.startDraggingPosition;
       this.imagePosition += dragDistance;
@@ -54,8 +61,16 @@ export class SliderAulaComponent implements AfterViewInit {
   @HostListener('mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
     event.preventDefault();
+    this.endClickX = event.clientX;
+
     if (event.button === 0) {
       this.startDraggingPosition = 0;
+    }
+  }
+
+  editDesign(desginId: string) {
+    if (this.startClickX === this.endClickX) {
+      window.open(`https://editor.trakto.io/editor/${desginId}`);
     }
   }
 }

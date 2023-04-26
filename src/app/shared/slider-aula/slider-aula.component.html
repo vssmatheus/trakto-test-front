@@ -2,14 +2,15 @@
   <div class="carousel-wrapper" [style.left.px]="imagePosition">
     <div class="carousel-image" *ngFor="let item of materiaisDidaticos | async">
       <div class="item">
-        <a [href]="'https://editor.trakto.io/editor/' + item.id">
+        <a (click)="editDesign(item.id)">
           <img [src]="item.cover.low" />
         </a>
-        <span>{{item.pages.length}} {{item.pages.length > 1 ? 'Slides' : 'Slide'}}</span>
+        <span *ngIf="item.pages"
+          >{{ item.pages.length }}
+          {{ item.pages.length > 1 ? "Slides" : "Slide" }}</span
+        >
       </div>
       <p>{{ item.title }}</p>
     </div>
   </div>
 </div>
-
-
