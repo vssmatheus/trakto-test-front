@@ -1,0 +1,33 @@
+<section>
+  <div *ngIf="date" class="date-info">
+    <span>{{ date }}</span>
+    <div class="controllers">
+      <button>
+        <img
+          src="../../../assets/material-didatico/arrow-left-icon.svg"
+          alt=""
+        />
+      </button>
+      <button>
+        <img
+          src="../../../assets/material-didatico/arrow-right-icon.svg"
+          alt=""
+        />
+      </button>
+    </div>
+  </div>
+  <div class="title">
+    <h2>{{ title }}</h2>
+    <span class="subtitle">{{ subtitle }}</span>
+  </div>
+  <div class="button">
+    <app-button-router
+      *ngIf="nameButton"
+      name={{nameButton}}
+      path={{pathButton}}
+      colorBase={{colorButton}}
+      pathImage={{iconButton}}
+      hasIcon={{hasIconButton}}
+    ></app-button-router>
+  </div>
+</section>

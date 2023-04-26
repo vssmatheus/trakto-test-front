@@ -1,0 +1,8 @@
+<a
+  [style.border]="'1px solid ' + colorBase"
+  [style.color]="colorBase"
+  href="{{ path }}"
+>
+  <img *ngIf="hasIcon" src="{{ pathImage }}" alt="" />
+  {{ name }}
+</a>

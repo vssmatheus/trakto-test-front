@@ -1,0 +1,72 @@
+.content-header {
+  background-image: url(../../../../../assets/material-didatico/pattern.svg),
+    radial-gradient(
+      51.99% 51.99% at 64.17% 37.22%,
+      rgba(85, 230, 186, 0.639) 0%,
+      rgba(193, 229, 255, 0) 68.67%
+    ),
+    radial-gradient(
+      109.13% 109.13% at 77.27% -19.92%,
+      rgba(85, 125, 230, 0.261) 0%,
+      rgba(2, 39, 66, 0) 69.98%
+    ),
+    radial-gradient(
+      46.04% 46.04% at 26.85% 43.18%,
+      rgba(255, 230, 0, 0.5) 0%,
+      rgba(103, 191, 255, 0) 69.98%
+    ),
+    linear-gradient(180deg, #16984c 0%, #16b357 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 8rem;
+  min-width: 100%;
+  height: 500px;
+
+  .header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .title-page {
+      width: fit-content;
+      max-width: 510px;
+      margin-left: 120px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 0;
+
+      h1 {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 130%;
+        margin: 0;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 24px;
+        margin: 18px 0 0 0;
+      }
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      background-size: cover;
+      margin-top: 4.4rem;
+      right: 120px;
+      max-height: 430px;
+      max-width: fit-content;
+    }
+
+    @media only screen and (max-width: 1120px) {
+      img {
+        display: none;
+      }
+    }
+  }
+}
