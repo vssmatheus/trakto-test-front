@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { IMaterialDidaticoPage } from './models/material-diadatico.page.model';
 
 @Component({
-  selector: 'app-material-didatico',
+  selector: 'page-material-didatico',
   templateUrl: './material-didatico.component.html',
-  styleUrls: ['./material-didatico.component.scss']
+  styleUrls: ['./material-didatico.component.scss'],
 })
-export class MaterialDidaticoComponent {
-
+export class MaterialDidaticoComponent extends IMaterialDidaticoPage {
+  constructor(protected override _store: Store) {
+    super(_store);
+  }
 }

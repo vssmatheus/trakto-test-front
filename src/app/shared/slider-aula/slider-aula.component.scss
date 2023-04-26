@@ -34,15 +34,21 @@
 
 .item {
   position: relative;
-  cursor: pointer;
+  height: 174px;
+  border-radius: 8px;
 
-  div {
-    background-repeat: no-repeat;
-    background-size: cover;
+  a {
+    display: flex;
     object-fit: cover;
-    width: 310px;
-    height: 174px;
+    padding: 0;
+    cursor: pointer;
     border-radius: 8px;
+
+    img {
+      object-fit: cover;
+      width: 310px;
+      height: 174px;
+    }
   }
 
   span {

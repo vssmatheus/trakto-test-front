@@ -27,6 +27,7 @@ const routes: Routes = [
       import('./pages/material-didatico/material-didatico.module').then(
         (m) => m.MaterialDidaticoModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'ver-todos',
@@ -34,6 +35,7 @@ const routes: Routes = [
       import('./pages/ver-todos/ver-todos.module').then(
         (m) => m.VerTodosModule
       ),
+    canActivate: [AuthGuard],
   },
 ];
 

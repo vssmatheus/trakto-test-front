@@ -1,22 +1,22 @@
-.carousel-container {
+.list-container {
   min-width: 100%;
   margin-top: 5rem;
 }
 
-.carousel-wrapper {
+.list-wrapper {
   display: flex;
   flex-wrap: wrap;
   transition: 0.3s ease;
   max-width: 100%;
   gap: 32px;
-  row-gap: 28px;
+  row-gap: 30px;
 }
 
-.carousel-image {
+.list-image {
   flex: 0 0 500px;
-  height: 250px;
+  height: 220px;
   column-gap: 10px;
-  max-width: 310px;
+  max-width: 280px;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -30,14 +30,22 @@
 
 .item {
   position: relative;
+  height: 174px;
+  border-radius: 8px;
 
-  div {
-    background-repeat: no-repeat;
-    background-size: cover;
+  a {
+    display: flex;
     object-fit: cover;
-    width: 310px;
-    height: 174px;
+    padding: 0;
+    cursor: pointer;
     border-radius: 8px;
+
+    img {
+      object-fit: cover;
+      width: 280px;
+      height: 174px;
+      border-radius: 8px;
+    }
   }
 
   span {

@@ -1,11 +1,13 @@
 <div class="carousel-container">
   <div class="carousel-wrapper" [style.left.px]="imagePosition">
-    <div class="carousel-image" *ngFor="let item of items">
+    <div class="carousel-image" *ngFor="let item of materiaisDidaticos | async">
       <div class="item">
-        <div [style.background-image]="'url(' + item.image + ')'"></div>
-        <span>6 Slides</span>
+        <a [href]="'https://editor.trakto.io/editor/' + item.id">
+          <img [src]="item.cover.low" />
+        </a>
+        <span>{{item.pages.length}} {{item.pages.length > 1 ? 'Slides' : 'Slide'}}</span>
       </div>
-      <p>{{item.description}}</p>
+      <p>{{ item.title }}</p>
     </div>
   </div>
 </div>
