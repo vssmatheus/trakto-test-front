@@ -5,7 +5,10 @@
         <a [href]="'https://editor.trakto.io/editor/' + item.id">
           <img [src]="item.cover.low" />
         </a>
-        <span>{{item.pages.length}} {{item.pages.length > 1 ? 'Slides' : 'Slide'}}</span>
+        <span *ngIf="item.pages"
+          >{{ item.pages.length }}
+          {{ item.pages.length > 1 ? "Slides" : "Slide" }}</span
+        >
       </div>
       <p>{{ item.title }}</p>
     </div>
